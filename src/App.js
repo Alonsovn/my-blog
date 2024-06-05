@@ -1,8 +1,8 @@
 import "./App.css";
 import NavBar from "./NavBar";
 import AboutPage from "./pages/AboutPage";
-import ArticuleListPage from "./pages/ArticuleListPage";
-import ArticulePage from "./pages/ArticulePage";
+import ArticleListPage from "./pages/ArticleListPage";
+import ArticlePage from "./pages/ArticlePage";
 import HomePage from "./pages/HomePage";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -16,8 +16,8 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
-            <Route path="/articules" element={<ArticuleListPage />} />
-            <Route path="/articules:articuleId" element={<ArticulePage />} />
+            <Route path="/articles" element={<ArticleListPage />} />
+            <Route path="/articles/:articleId" element={<ArticlePage />} />
           </Routes>
         </div>
       </div>
