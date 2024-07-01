@@ -10,12 +10,13 @@ const LoginPage = () => {
   const navigate = useNavigate();
 
   const logIn = async () => {
-    try {
-      await signInWithEmailAndPassword(getAuth(), email, password);
-      navigate("/articles");
-    } catch (e) {
-      setError(e.message);
-    }
+    await signInWithEmailAndPassword(getAuth(), email, password)
+      .then(() => {
+        navigate("/articles");
+      })
+      .catch((e) => {
+        setError(e.message);
+      });
   };
 
   return (
